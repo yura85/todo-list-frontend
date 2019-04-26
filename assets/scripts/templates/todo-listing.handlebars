@@ -1,0 +1,28 @@
+{{#each todos as |todo|}}
+  {{log todo}}
+  <section data-id="{{todo.id}}">
+    <!-- <h6>Title:</h6> -->
+    <h3>
+      {{limit todo.title 15}}
+    </h3>
+    <!-- <h6>Text:</h6> -->
+    <p>
+      {{#if todo.text}}
+        {{todo.text}}
+        {{else}}
+        Not provided
+        {{/if}}
+      </p>
+        <p>
+          {{#if todo.completed}}
+            {{todo.completed}}
+        {{else}}
+        Not provided.
+      {{/if}}
+    </p>
+     <!-- {{> partial}} -->
+     <button  data-id="{{todo.id}}" class="btn btn-danger update">Update</button>
+     <button  data-id="{{todo.id}}" class="btn btn-danger delete">Remove</button>
+  </section>
+
+{{/each}}

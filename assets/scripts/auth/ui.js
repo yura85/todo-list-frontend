@@ -2,7 +2,7 @@
 const store = require('../store')
 
 const signUpSuccess = function (data) {
-  $('.message').text('You created account, please sign in to play').show()
+  $('.message').text('You created account').show()
   // $('#sign-up').hide()
   $('#sign-up').trigger('reset')
 }
@@ -14,8 +14,11 @@ const failure = function (data) {
   $('form').trigger('reset')
 }
 const signInSeccess = function (data) {
-  $('.message').text('Sign in success start new game').show()
+  $('.message').text('Sign in success').show()
   store.user = data.user
+  setTimeout(() => {
+    $('.message').text('').hide()
+  }, 2000)
   $('form').trigger('reset')
 }
 
@@ -31,7 +34,7 @@ const changePasswordSuccess = function (data) {
 const signOutSuccess = function () {
   store.user = null
   $('form').trigger('reset')
-  $('.message').text('Sign out success! Please create a new account or sign in to play').show()
+  $('.message').text('Sign out success!').show()
   setTimeout(() => {
     $('.message').text('').hide()
   }, 2000)

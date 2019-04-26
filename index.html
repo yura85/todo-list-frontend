@@ -12,8 +12,13 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>todo list</h1>
-
+      <nav>
+      <div class="app-name">todo list</div>
+      <div class="nav-buttons">
+        <button id="getTodosButton" class="btn btn-info mr-2">Get!</button>
+        <button id="clearTodosButton" class="btn btn-outline-info">Clear!</button>
+      </div>
+    </nav>
       <form id="sign-up">
 <input type="email" name="credentials[email]" placeholder="Email" required>
 <input type="password" name="credentials[password]" placeholder="password" required>
@@ -33,36 +38,18 @@
    <form id="sign-out">
 <input type="submit" value="Sign Out">
   </form>
-  <h3 class="game-over"></h3>
-  <div id="boxes" class="embed-responsive-item embed-responsive-1by1 container">
-          <h1 class="turn"></h1>
-          <div class="row">
-            <div data-id="0" class="col-md-3 box alt-color"></div>
-            <div data-id="1" class="col-md-3 box alt-color"></div>
-            <div data-id="2" class="col-md-3 box alt-color"></div>
-          </div>
+  <main>
+    <div id="content" class="content"></div>
+  </main>
 
-          <div class="row">
-            <div data-id="3" class="col-md-3 box alt-color"></div>
-            <div data-id="4" class="col-md-3 box alt-color"></div>
-            <div data-id="5" class="col-md-3 box alt-color"></div>
-          </div>
-
-          <div class="row">
-            <div data-id="6" class="col-md-3 box alt-color"></div>
-            <div data-id="7" class="col-md-3 box alt-color"></div>
-            <div data-id="8" class="col-md-3 box alt-color"></div>
-          </div>
- </div>
  <!-- <form id="reset">
    <input type="submit" value="start new game">
  </form>
 
  <form id="index-game">
     <input type="submit" value="Get All Games">
-  </form>
+  </form> -->
 
  <h3 class="message"></h3>
- <h3 class="win-or-loose"></h3> -->
-    </body>
+ </body>
 </html>
