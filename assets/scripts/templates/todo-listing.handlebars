@@ -13,16 +13,42 @@
         Not provided
         {{/if}}
       </p>
-        <p>
+      {{!--  <p>
           {{#if todo.completed}}
             {{todo.completed}}
         {{else}}
         Not provided.
       {{/if}}
     </p>
-     <!-- {{> partial}} -->
-     <button  data-id="{{todo.id}}" class="btn btn-danger update">Update</button>
+      {{> partial}} --}}
+     <button class="btn btn-danger update" data-toggle="modal" data-target="#updateModal{{id}}">Update</button>
+
+     <div class="modal fade" id="updateModal{{id}}" tabindex="-1" role="dialog" aria-labelledby="updateModalLabel" aria-hidden="true">
+       <div class="modal-dialog" role="document">
+         <div class="modal-content">
+           <div class="modal-header">
+             <h5 class="modal-title">Update</h5>
+             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+             </button>
+           </div>
+           <div class="modal-body">
+             <form data-id="{{todo.id}}" class="update-form">
+               <p><strong> Title: </strong><input required type="text" name="todo[title]" placeholder="Title"></p>
+               <textarea required type="text" name="todo[text]" maxlength="2000" rows="4" cols="40" placeholder="Write a description of what you want to accomplish"></textarea>
+               <button type="submit" class="btn btn-primary">Save changes</button>
+               <button type="button" class="btn btn-secondary" data-dismiss="modal">cancel</button>
+             </form>
+
+             </div>
+
+         </div>
+       </div>
+     </div>
+
      <button  data-id="{{todo.id}}" class="btn btn-danger delete">Remove</button>
+     <button  data-id="{{todo.id}}" class="btn btn-danger complete">Complete</button>
+
   </section>
 
 {{/each}}

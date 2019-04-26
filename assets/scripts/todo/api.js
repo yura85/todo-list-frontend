@@ -21,7 +21,59 @@ const deleteTodo = function (id) {
     }
   })
 }
+
+const createTodo = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/todos',
+    method: 'POST',
+    headers: {
+      Authorization: `Token token=` + store.user.token
+    },
+    data: {
+      'todo': {
+        'title': data.todo.title,
+        'text': data.todo.text,
+        'completed': false
+      }
+    }
+  })
+}
+
+const updateTodo = function (data, id) {
+  return $.ajax({
+    url: config.apiUrl + `/todos/${id}`,
+    method: 'PATCH',
+    headers: {
+      Authorization: `Token token=` + store.user.token
+    },
+    data: {
+      'todo': {
+        'title': data.todo.title,
+        'text': data.todo.text
+      }
+    }
+  })
+}
+
+const completeTodo = function (data, id) {
+  return $.ajax({
+    url: config.apiUrl + `/todos${id}`,
+    method: 'PATCH',
+    headers: {
+      Authorization: `Token token=` + store.user.token
+    },
+    data: {
+      'todo': {
+        'completed': data.todo.completed
+      }
+    }
+  })
+}
+
 module.exports = {
   getTodos,
-  deleteTodo
+  deleteTodo,
+  createTodo,
+  updateTodo,
+  completeTodo
 }

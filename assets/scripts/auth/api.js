@@ -35,50 +35,11 @@ const signOut = function () {
     }
   })
 }
-// const createNewGame = function (data) {
-//   return $.ajax({
-//     url: config.apiUrl + '/games',
-//     method: 'POST',
-//     headers: {
-//       Authorization: 'Token token=' + store.user.token
-//     },
-//     data: {}
-//   })
-// }
-// const indexGame = function () {
-//   return $.ajax({
-//     url: config.apiUrl + '/games',
-//     method: 'GET',
-//     headers: {
-//       Authorization: 'Token token=' + store.user.token
-//     }
-//   })
-// }
-// const upDateGame = function (dataOfId, currentPlayer, gameStatus) {
-//   return $.ajax({
-//     url: config.apiUrl + '/games/' + store.game.id,
-//     method: 'PATCH',
-//     headers: {
-//       Authorization: 'Token token=' + store.user.token
-//     },
-//     data: {
-//       game: {
-//         cell: {
-//           index: dataOfId,
-//           value: currentPlayer
-//         },
-//         over: gameStatus
-//       }
-//     }
-//   })
-// }
 
 module.exports = {
   signUp,
   signIn,
   changePassword,
   signOut
-  // createNewGame,
-  // indexGame,
-  // upDateGame
+
 }

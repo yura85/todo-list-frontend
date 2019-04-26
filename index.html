@@ -16,6 +16,7 @@
       <div class="app-name">todo list</div>
       <div class="nav-buttons">
         <button id="getTodosButton" class="btn btn-info mr-2">Get!</button>
+        <!-- <button id="createTodoButton" class="btn btn-info mr-2">Create</button> -->
         <button id="clearTodosButton" class="btn btn-outline-info">Clear!</button>
       </div>
     </nav>
@@ -38,18 +39,45 @@
    <form id="sign-out">
 <input type="submit" value="Sign Out">
   </form>
+  <form id="createForm">
+    <h3>create new task</h3>
+    <p><strong> Title: </strong><input required type="text" name="todo[title]" placeholder="Title"></p>
+    <textarea required type="text" name="todo[text]" maxlength="2000" rows="4" cols="40" placeholder="Write a description of what you want to accomplish"></textarea>
+  </br><input type="submit" name="submit" value="Create">
+</form>
   <main>
-    <div id="content" class="content"></div>
+
+    <div id="content" class="content">
+
+      <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+</button> -->
+
+<!-- Modal -->
+<!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+    </div>
   </main>
 
- <!-- <form id="reset">
-   <input type="submit" value="start new game">
- </form>
-
- <form id="index-game">
-    <input type="submit" value="Get All Games">
-  </form> -->
-
- <h3 class="message"></h3>
+  <h3 class="message"></h3>
  </body>
 </html>
