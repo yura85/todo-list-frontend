@@ -1,7 +1,7 @@
 'use strict'
 
 const config = require('../config')
-// const store = require('../store')
+const store = require('../store')
 
 const getTodos = function () {
   return $.ajax({
@@ -15,7 +15,10 @@ const getTodos = function () {
 const deleteTodo = function (id) {
   return $.ajax({
     url: config.apiUrl + `/todos/${id}`,
-    method: 'DELETE'
+    method: 'DELETE',
+    headers: {
+      Authorization: `Token token=` + store.user.token
+    }
   })
 }
 module.exports = {
