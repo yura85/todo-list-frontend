@@ -31,7 +31,7 @@ const onCreateTodo = (event) => {
   api.createTodo(data)
     .then(ui.createTodoSuccess)
     .then(() => onGetTodos(event))
-    .catch(ui.failure)
+    .catch(ui.createTodoFailure)
 }
 
 const onUpdateTodo = (event) => {
@@ -48,13 +48,10 @@ const onUpdateTodo = (event) => {
 
 const onCompleteTodo = (event) => {
   event.preventDefault()
-  const id = $(event.target).data('id')
   const data = getFormFields(event.target)
+  const id = $(event.target).data('id')
+  console.log(id)
   console.log(data)
-  let completeStatus = data.todo.completed
-  if (completeStatus === false) {
-    completeStatus = true
-  }
   api.completeTodo(data, id)
     .then(ui.completeTodoSuccess)
     .then(() => onGetTodos(event))

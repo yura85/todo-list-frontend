@@ -57,14 +57,14 @@ const updateTodo = function (data, id) {
 
 const completeTodo = function (data, id) {
   return $.ajax({
-    url: config.apiUrl + `/todos${id}`,
+    url: config.apiUrl + `/todos/${id}`,
     method: 'PATCH',
     headers: {
       Authorization: `Token token=` + store.user.token
     },
     data: {
       'todo': {
-        'completed': data.todo.completed
+        'completed': true
       }
     }
   })

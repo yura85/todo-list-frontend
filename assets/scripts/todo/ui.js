@@ -15,6 +15,10 @@ const createTodoSuccess = (data) => {
   $('#createForm').trigger('reset')
 }
 
+const createTodoFailure = (data) => {
+  $('form').trigger('reset')
+}
+
 const updateTodoSuccess = (data, id) => {
   console.log('update successs', data, id)
   store.data = data.todo
@@ -24,7 +28,6 @@ const updateTodoSuccess = (data, id) => {
 const completeTodoSuccess = (data, id) => {
   store.data = data.todo
   console.log('completed success ', data, id)
-  // $('')
 }
 
 const failure = (error) => {
@@ -40,6 +43,7 @@ module.exports = {
   createTodoSuccess,
   updateTodoSuccess,
   completeTodoSuccess,
+  createTodoFailure,
   failure,
   clearTodos
 }

@@ -1,11 +1,9 @@
 {{#each todos as |todo|}}
   {{log todo}}
   <section data-id="{{todo.id}}">
-    <!-- <h6>Title:</h6> -->
     <h3>
       {{limit todo.title 15}}
     </h3>
-    <!-- <h6>Text:</h6> -->
     <p>
       {{#if todo.text}}
         {{todo.text}}
