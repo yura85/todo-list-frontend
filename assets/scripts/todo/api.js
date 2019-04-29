@@ -8,6 +8,7 @@ const getTodos = function () {
     url: config.apiUrl + '/todos',
     method: 'GET',
     headers: {
+      Authorization: `Token token=` + store.user.token
     }
   })
 }
@@ -49,7 +50,8 @@ const updateTodo = function (data, id) {
     data: {
       'todo': {
         'title': data.todo.title,
-        'text': data.todo.text
+        'text': data.todo.text,
+        'completed': false
       }
     }
   })

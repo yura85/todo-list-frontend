@@ -1,1 +1,12 @@
 @import '~bootstrap/scss/bootstrap';
+
+.completed {
+  text-decoration: line-through;
+}
+
+.content {
+  // background-color: blue;
+  height: 500px;
+  overflow: hidden;
+  overflow-y: scroll;
+}

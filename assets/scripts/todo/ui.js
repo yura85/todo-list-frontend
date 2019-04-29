@@ -28,6 +28,7 @@ const updateTodoSuccess = (data, id) => {
 const completeTodoSuccess = (data, id) => {
   store.data = data.todo
   console.log('completed success ', data, id)
+  // $('.content').css('color', 'red')
 }
 
 const failure = (error) => {

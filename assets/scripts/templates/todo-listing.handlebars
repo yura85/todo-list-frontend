@@ -1,24 +1,17 @@
 {{#each todos as |todo|}}
   {{log todo}}
   <section data-id="{{todo.id}}">
-    <h3>
+    <h3 {{#if todo.completed }} class="completed" {{/if}}>
       {{limit todo.title 15}}
     </h3>
-    <p>
+    <p {{#if todo.completed }} class="completed" {{/if}}>
       {{#if todo.text}}
         {{todo.text}}
         {{else}}
         Not provided
         {{/if}}
       </p>
-      {{!--  <p>
-          {{#if todo.completed}}
-            {{todo.completed}}
-        {{else}}
-        Not provided.
-      {{/if}}
-    </p>
-      {{> partial}} --}}
+
      <button class="btn btn-danger update" data-toggle="modal" data-target="#updateModal{{id}}">Update</button>
 
      <div class="modal fade" id="updateModal{{id}}" tabindex="-1" role="dialog" aria-labelledby="updateModalLabel" aria-hidden="true">
