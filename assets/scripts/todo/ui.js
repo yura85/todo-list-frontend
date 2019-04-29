@@ -20,6 +20,10 @@ const createTodoFailure = (data) => {
 }
 
 const updateTodoSuccess = (data, id) => {
+  $('.message').text('your task is updated').show()
+  setTimeout(() => {
+    $('.message').text('').hide()
+  }, 2000)
   console.log('update successs', data, id)
   store.data = data.todo
   $('.modal-backdrop').removeClass('modal-backdrop fade show')
@@ -27,8 +31,18 @@ const updateTodoSuccess = (data, id) => {
 
 const completeTodoSuccess = (data, id) => {
   store.data = data.todo
+  $('.message').text('your task is completed').show()
+  setTimeout(() => {
+    $('.message').text('').hide()
+  }, 2000)
   console.log('completed success ', data, id)
-  // $('.content').css('color', 'red')
+}
+
+const deleteSucces = () => {
+  $('.message').text('your task is deleted').show()
+  setTimeout(() => {
+    $('.message').text('').hide()
+  }, 2000)
 }
 
 const failure = (error) => {
@@ -45,6 +59,7 @@ module.exports = {
   updateTodoSuccess,
   completeTodoSuccess,
   createTodoFailure,
+  deleteSucces,
   failure,
   clearTodos
 }

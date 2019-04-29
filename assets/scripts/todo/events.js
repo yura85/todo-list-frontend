@@ -20,6 +20,7 @@ const onDeleteTodo = (event) => {
   const id = $(event.target).data('id')
   console.log(id)
   api.deleteTodo(id)
+    .then(ui.deleteSucces)
     .then(() => onGetTodos(event))
     .catch(ui.failure)
 }

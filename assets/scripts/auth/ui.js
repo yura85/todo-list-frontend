@@ -2,7 +2,7 @@
 const store = require('../store')
 
 const signUpSuccess = function (data) {
-  $('.message').text('You created account').show()
+  $('.message').text('You created account, please sign in to create your list').show()
   // $('#sign-up').hide()
   $('#sign-up').trigger('reset')
 }
@@ -15,6 +15,13 @@ const failure = function (data) {
 }
 const signInSeccess = function (data) {
   $('.message').text('Sign in success').show()
+  $('#createForm').show()
+  $('.a-change-pass').show()
+  $('#sign-out').show()
+  $('.nav-buttons').show()
+  $('.content').show()
+  $('.a-sign-up').hide()
+  $('.a-sign-in').hide()
   store.user = data.user
   setTimeout(() => {
     $('.message').text('').hide()
@@ -38,28 +45,15 @@ const signOutSuccess = function () {
   setTimeout(() => {
     $('.message').text('').hide()
   }, 2000)
+  $('.message').text('What\'s on your List?  Log in to create one!')
+  $('#createForm').hide()
+  $('.a-change-pass').hide()
+  $('#sign-out').hide()
+  $('.nav-buttons').hide()
+  $('.content').hide()
+  $('.a-sign-up').show()
+  $('.a-sign-in').show()
 }
-
-// const createNewGameSuccess = function (data) {
-//   store.game = data.game
-//   $('.container').show()
-//   $('.message').hide()
-//   $('.container').show()
-//   $('#index-game').show()
-//   $('#new-game').hide()
-//   $('#reset').show()
-// }
-//
-// const indexGameSuccess = function (data) {
-//   $('.message').text('You played ' + data.games.length + ' games').show()
-//   setTimeout(() => {
-//     $('.message').text('').hide()
-//   }, 2000)
-// }
-//
-// const updateGameSuccess = function (data) {
-//   store.game = data.game
-// }
 
 module.exports = {
   signUpSuccess,
@@ -67,7 +61,4 @@ module.exports = {
   signInSeccess,
   changePasswordSuccess,
   signOutSuccess
-  // createNewGameSuccess,
-  // indexGameSuccess,
-  // updateGameSuccess
 }

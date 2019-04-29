@@ -1,5 +1,9 @@
 @import '~bootstrap/scss/bootstrap';
 
+body {
+  background-color: rgba(66, 244, 194, 0.1)
+}
+
 .completed {
   text-decoration: line-through;
 }
@@ -9,4 +13,14 @@
   height: 500px;
   overflow: hidden;
   overflow-y: scroll;
+}
+
+.navbar {
+  background-color: gray;
+  display: flex;
+}
+
+.container-fluid {
+  display: flex;
+  flex-direction: row;
 }
