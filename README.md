@@ -1,27 +1,26 @@
+<https://infinite-journey-53974.herokuapp.com/>  heroku link
 
-https://infinite-journey-53974.herokuapp.com/  heroku link
+<https://yura85.github.io/todo-list-frontend/> github frontend link
 
-https://yura85.github.io/todo-list-frontend/ github frontend
+<https://yura85.github.io/todo-list-api/> github api link
 
- https://yura85.github.io/todo-list-api/ github api
+### Todo List Application
 
-##Todo List Application
+## About this Application
 
-#About this Application
+This is a simple Todo list application that lets users create, view, update and delete their todotlist items.
 
-This is a simple bucket list application that lets users create, view, update and delete their bucketlist items.
-
-#User Stories
+## User Stories
 
 As an unregistered user, I want to be able to sign up for an account with my credentials, so that I can sign in.
 
 As a registered user, I want to see a message confirming that my account was created successfully, so that I can sign in with my
 
- credentials.
+credentials.
 
 As a registered user, I want to sign in with my account credentials at any time, so that I can create, update, view or delete my
 
- bucket list items.
+Todo list items.
 
 As a signed in user, I want to see a confirmation showing that I’m signed in.
 
@@ -31,40 +30,31 @@ As a signed in user, I want to see a confirmation showing that I created my buck
 
 As a registered user, I want to see all my bucket list items.
 
-#Wireframes
+## Wireframe
 
-Created at the first stages of the preparartion for the project, the wireframes came out to be quite different from the built
+Created at the first stages of the preparartion for the project, the wireframes came out to be a bit different from the built
  application.
 
-Wireframe https://imgur.com/NoUKfsJ
+Wireframe <https://imgur.com/NoUKfsJ>
 
-*Technologies Used
+## Technologies Used
 
-*JavaScript
+-   JavaScript
+-   HTML
+-   CSS / SCSS
+-   Handlebars
+-   Bootstrap
+-   jQuery
+-   AJAX
+-   JSON
+-   Git
+-   Github Pages
 
-*HTML
-
-*CSS / SCSS
-
-*Handlebars
-
-*Bootstrap
-
-*jQuery
-
-*AJAX
-
-*JSON
-
-*Git
-
-*Github Pages
-
-#List of Problems to be Solved in the Future
+## List of Problems to be Solved in the Future
 
 Connect to third party APIs (e.g. Google Maps).
 
-#Planning, Process and Problem-solving Strategy
+Planning, Process and Problem-solving Strategy
 
 In the beginning of my project planning i considered a number of options for my
 

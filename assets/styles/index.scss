@@ -11,8 +11,12 @@ body {
   height: 100%;
   }
 
-  .hidden {
-    display: none;
+.btn {
+  margin: 5px;
+      }
+
+.hidden {
+  display: none;
   }
 
 .completed {
@@ -22,9 +26,9 @@ body {
 .content {
   background-color: rgba(255, 255, 255, 0.5);
   height: 500px;
+  margin: 20px;
   overflow: hidden;
   overflow-y: scroll;
-  margin: 20px;
   padding: 10px;
 }
 
@@ -38,19 +42,16 @@ body {
   flex-direction: row;
 }
 
-.main-content {
-  float: none;
-  padding-top: 20px;
-}
 
 .message {
   font-family: 'Patua One', cursive;
   font-size: 25px;
   height: 20px;
-  margin-bottom: 30px;
+  left: 0;
+  position: absolute;
   text-align: center;
-  outline-color: black;
-  margin-bottom: 20px;
+  top: 10%;
+  width: 100%;
 }
 
 .create-form {

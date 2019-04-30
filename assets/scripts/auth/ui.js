@@ -6,8 +6,14 @@ const signUpSuccess = function (data) {
   $('#modal1').modal('toggle')
   $('#sign-up').trigger('reset')
 }
+
+const signUpFailure = function (data) {
+  $('.message').text('Something went wrong please try again').show()
+  $('#modal1').modal('toggle')
+  $('#sign-up').trigger('reset')
+}
 const failure = function (data) {
-  $('.message').text('something went wrong please try again').show()
+  $('.message').text('Something went wrong please try again').show()
   setTimeout(() => {
     $('.message').text('').hide()
   }, 2000)
@@ -19,9 +25,10 @@ const signInSeccess = function (data) {
   $('.a-change-pass').show()
   $('#sign-out').show()
   $('.nav-buttons').show()
-  $('.content').show()
+  $('.content').hide()
   $('.a-sign-up').hide()
   $('.a-sign-in').hide()
+  $('#getTodosButton').show()
   $('#modal2').modal('toggle')
   store.user = data.user
   setTimeout(() => {
@@ -29,9 +36,16 @@ const signInSeccess = function (data) {
   }, 2000)
   $('form').trigger('reset')
 }
-
+const signInFailure = function (data) {
+  $('.message').text('Something went wrong try again please').show()
+  setTimeout(() => {
+    $('.message').text('').hide()
+  }, 2000)
+  $('#modal2').modal('toggle')
+  $('form').trigger('reset')
+}
 const changePasswordSuccess = function (data) {
-  // store.user = data.user
+  store.user = data.user
   $('.message').text('You successfuly change your password').show()
   setTimeout(() => {
     $('.message').text('').hide()
@@ -40,6 +54,14 @@ const changePasswordSuccess = function (data) {
   $('form').trigger('reset')
 }
 
+const changePasswordFailure = function (data) {
+  $('.message').text('Something went wrong try again please').show()
+  setTimeout(() => {
+    $('.message').text('').hide()
+  }, 2000)
+  $('#modal3').modal('toggle')
+  $('form').trigger('reset')
+}
 const signOutSuccess = function () {
   store.user = null
   $('form').trigger('reset')
@@ -55,6 +77,7 @@ const signOutSuccess = function () {
   $('.content').hide()
   $('.a-sign-up').show()
   $('.a-sign-in').show()
+  $('#clearTodosButton').hide()
 }
 
 module.exports = {
@@ -62,5 +85,8 @@ module.exports = {
   failure,
   signInSeccess,
   changePasswordSuccess,
-  signOutSuccess
+  signOutSuccess,
+  signInFailure,
+  signUpFailure,
+  changePasswordFailure
 }

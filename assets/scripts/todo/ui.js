@@ -6,10 +6,16 @@ const store = require('../store')
 const getTodosSuccess = (data) => {
   const showTodosHtml = showTodosTemplate({ todos: data.todos })
   $('.content').html(showTodosHtml).show()
+  $('#getTodosButton').hide()
+  $('#clearTodosButton').show()
 }
 
 const createTodoSuccess = (data) => {
   store.todo = data.todo
+  $('.message').text('you created a new task').show()
+  setTimeout(() => {
+    $('.message').text('').hide()
+  }, 2000)
   $('#createForm').trigger('reset')
 }
 
@@ -47,6 +53,8 @@ const failure = (error) => {
 
 const clearTodos = () => {
   $('.content').hide()
+  $('#getTodosButton').show()
+  $('#clearTodosButton').hide()
 }
 
 module.exports = {

@@ -8,12 +8,13 @@
 const userEvents = require('./auth/events.js')
 const todoEvents = require('./todo/events.js')
 
-$('.message').text('What\'s on your List?  Log in to create one!')
+$('.message').text('What\'s on your List?  Log in to create one!').show()
 $('#createForm').hide()
 $('.a-change-pass').hide()
 $('#sign-out').hide()
 $('.nav-buttons').hide()
 $('.content').hide()
+$('#clearTodosButton').hide()
 $(() => {
   // your JS code goes here
   userEvents.addHandlers()
