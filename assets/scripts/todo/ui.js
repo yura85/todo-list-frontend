@@ -36,6 +36,7 @@ const completeTodoSuccess = (data, id) => {
     $('.message').text('').hide()
   }, 2000)
   console.log('completed success ', data, id)
+  console.log('id is set to ' + id)
 }
 
 const deleteSucces = () => {
