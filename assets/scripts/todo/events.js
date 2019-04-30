@@ -18,7 +18,6 @@ const onClearTodos = (event) => {
 const onDeleteTodo = (event) => {
   event.preventDefault()
   const id = $(event.target).data('id')
-  console.log(id)
   api.deleteTodo(id)
     .then(ui.deleteSucces)
     .then(() => onGetTodos(event))
@@ -28,7 +27,6 @@ const onDeleteTodo = (event) => {
 const onCreateTodo = (event) => {
   event.preventDefault()
   const data = getFormFields(event.target)
-  console.log(data)
   api.createTodo(data)
     .then(ui.createTodoSuccess)
     .then(() => onGetTodos(event))
@@ -38,9 +36,7 @@ const onCreateTodo = (event) => {
 const onUpdateTodo = (event) => {
   event.preventDefault()
   const data = getFormFields(event.target)
-  console.log(data)
   const id = $(event.target).data('id')
-  console.log(id)
   api.updateTodo(data, id)
     .then(ui.updateTodoSuccess)
     .then(() => onGetTodos(event))
@@ -51,8 +47,6 @@ const onCompleteTodo = (event) => {
   event.preventDefault()
   const data = getFormFields(event.target)
   const id = $(event.target).data('id')
-  console.log(id)
-  console.log(data)
   api.completeTodo(data, id)
     .then(ui.completeTodoSuccess)
     .then(() => onGetTodos(event))

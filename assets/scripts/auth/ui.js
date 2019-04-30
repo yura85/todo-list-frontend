@@ -3,7 +3,7 @@ const store = require('../store')
 
 const signUpSuccess = function (data) {
   $('.message').text('You created account, please sign in to create your list').show()
-  // $('#sign-up').hide()
+  $('#modal1').modal('toggle')
   $('#sign-up').trigger('reset')
 }
 const failure = function (data) {
@@ -22,6 +22,7 @@ const signInSeccess = function (data) {
   $('.content').show()
   $('.a-sign-up').hide()
   $('.a-sign-in').hide()
+  $('#modal').modal('toggle')
   store.user = data.user
   setTimeout(() => {
     $('.message').text('').hide()
@@ -35,6 +36,7 @@ const changePasswordSuccess = function (data) {
   setTimeout(() => {
     $('.message').text('').hide()
   }, 2000)
+  $('#modal3').modal('toggle')
   $('form').trigger('reset')
 }
 
