@@ -96,25 +96,30 @@
             </div>
           </div>
         </div>
-    </div>
+      </div>
 
   <nav>
 
     <div class="nav-buttons">
       <button id="getTodosButton" class="btn btn-info mr-2">Show List!</button>
 
-      <button id="clearTodosButton" class="btn btn-outline-info">Hide List!</button>
+      <button id="clearTodosButton" class="btn btn-info mr-2">Hide List!</button>
     </div>
   </nav>
-
+  <main>
+<div class="create-form">
   <form id="createForm">
     <h3>create new task</h3>
     <p><strong> Title: </strong><input required type="text" name="todo[title]" placeholder="Title"></p>
     <textarea required type="text" name="todo[text]" maxlength="2000" rows="4" cols="40" placeholder="Write a description of what you want to accomplish"></textarea>
     </br><input type="submit" name="submit" value="Create">
   </form>
-  <main>
-    <h3 class="message"></h3>
+</div>
+
+    <div id="main-content" class="container-fluid">
+    <h4 class="message"></h4>
+  </div>
+
 
     <div id="content" class="content">
 

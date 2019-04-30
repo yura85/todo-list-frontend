@@ -1,16 +1,17 @@
+
 https://infinite-journey-53974.herokuapp.com/  heroku link
 
 https://yura85.github.io/todo-list-frontend/ github frontend
 
  https://yura85.github.io/todo-list-api/ github api
 
-Todo List Application
+##Todo List Application
 
-About this Application
+#About this Application
 
 This is a simple bucket list application that lets users create, view, update and delete their bucketlist items.
 
-User Stories
+#User Stories
 
 As an unregistered user, I want to be able to sign up for an account with my credentials, so that I can sign in.
 
@@ -30,40 +31,40 @@ As a signed in user, I want to see a confirmation showing that I created my buck
 
 As a registered user, I want to see all my bucket list items.
 
-Wireframes
+#Wireframes
 
 Created at the first stages of the preparartion for the project, the wireframes came out to be quite different from the built
  application.
 
 Wireframe https://imgur.com/NoUKfsJ
 
-Technologies Used
+*Technologies Used
 
-JavaScript
+*JavaScript
 
-HTML
+*HTML
 
-CSS / SCSS
+*CSS / SCSS
 
-Handlebars
+*Handlebars
 
-Bootstrap
+*Bootstrap
 
-jQuery
+*jQuery
 
-AJAX
+*AJAX
 
-JSON
+*JSON
 
-Git
+*Git
 
-Github Pages
+*Github Pages
 
-List of Problems to be Solved in the Future
+#List of Problems to be Solved in the Future
 
 Connect to third party APIs (e.g. Google Maps).
 
-Planning, Process and Problem-solving Strategy
+#Planning, Process and Problem-solving Strategy
 
 In the beginning of my project planning i considered a number of options for my
 

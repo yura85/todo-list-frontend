@@ -22,7 +22,7 @@ const signInSeccess = function (data) {
   $('.content').show()
   $('.a-sign-up').hide()
   $('.a-sign-in').hide()
-  $('#modal').modal('toggle')
+  $('#modal2').modal('toggle')
   store.user = data.user
   setTimeout(() => {
     $('.message').text('').hide()
@@ -47,7 +47,7 @@ const signOutSuccess = function () {
   setTimeout(() => {
     $('.message').text('').hide()
   }, 2000)
-  $('.message').text('What\'s on your List?  Log in to create one!')
+  // $('.message').text('What\'s on your List?  Log in to create one!').show()
   $('#createForm').hide()
   $('.a-change-pass').hide()
   $('#sign-out').hide()

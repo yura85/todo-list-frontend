@@ -13,6 +13,7 @@ $('#createForm').hide()
 $('.a-change-pass').hide()
 $('#sign-out').hide()
 $('.nav-buttons').hide()
+$('.content').hide()
 $(() => {
   // your JS code goes here
   userEvents.addHandlers()

@@ -48,7 +48,7 @@ const onCompleteTodo = (event) => {
   const data = getFormFields(event.target)
   const id = $(event.target).data('id')
   api.completeTodo(data, id)
-    .then(ui.completeTodoSuccess)
+    .then(data => ui.completeTodoSuccess(event, data, id))
     .then(() => onGetTodos(event))
     .catch(ui.failure)
 }

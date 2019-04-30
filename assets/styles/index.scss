@@ -1,18 +1,31 @@
 @import '~bootstrap/scss/bootstrap';
+@import  url('https://fonts.googleapis.com/css?family=Patua+One');
 
 body {
-  background-color: rgba(66, 244, 194, 0.1)
-}
+  background-attachment: fixed;
+  background-image: url('public/pic.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Patua One', cursive;
+  height: 100%;
+  }
+
+  .hidden {
+    display: none;
+  }
 
 .completed {
   text-decoration: line-through;
 }
 
 .content {
-  // background-color: blue;
+  background-color: rgba(255, 255, 255, 0.5);
   height: 500px;
   overflow: hidden;
   overflow-y: scroll;
+  margin: 20px;
+  padding: 10px;
 }
 
 .navbar {
@@ -23,4 +36,23 @@ body {
 .container-fluid {
   display: flex;
   flex-direction: row;
+}
+
+.main-content {
+  float: none;
+  padding-top: 20px;
+}
+
+.message {
+  font-family: 'Patua One', cursive;
+  font-size: 25px;
+  height: 20px;
+  margin-bottom: 30px;
+  text-align: center;
+  outline-color: black;
+  margin-bottom: 20px;
+}
+
+.create-form {
+  margin: 20px;
 }

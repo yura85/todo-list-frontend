@@ -5,7 +5,7 @@ const store = require('../store')
 
 const getTodosSuccess = (data) => {
   const showTodosHtml = showTodosTemplate({ todos: data.todos })
-  $('.content').html(showTodosHtml)
+  $('.content').html(showTodosHtml).show()
 }
 
 const createTodoSuccess = (data) => {
@@ -26,7 +26,7 @@ const updateTodoSuccess = (data, id) => {
   $('.modal-backdrop').removeClass('modal-backdrop fade show')
 }
 
-const completeTodoSuccess = (data, id) => {
+const completeTodoSuccess = (event, data, id) => {
   store.data = data.todo
   $('.message').text('your task is completed').show()
   setTimeout(() => {
@@ -46,7 +46,7 @@ const failure = (error) => {
 }
 
 const clearTodos = () => {
-  $('.content').empty()
+  $('.content').hide()
 }
 
 module.exports = {
