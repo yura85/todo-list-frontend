@@ -1,5 +1,5 @@
 {{#each todos as |todo|}}
-  {{log todo}}
+
   <section data-id="{{todo.id}}">
     <h3 {{#if todo.completed }} class="completed" {{/if}}>
       {{limit todo.title 15}}

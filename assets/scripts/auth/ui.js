@@ -44,8 +44,7 @@ const signInFailure = function (data) {
   $('#modal2').modal('toggle')
   $('form').trigger('reset')
 }
-const changePasswordSuccess = function (data) {
-  store.user = data.user
+const changePasswordSuccess = function () {
   $('.message').text('You successfuly change your password').show()
   setTimeout(() => {
     $('.message').text('').hide()
