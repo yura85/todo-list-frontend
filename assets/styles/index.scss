@@ -24,7 +24,7 @@ body {
 }
 
 .content {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, .5);
   height: 500px;
   margin: 20px;
   overflow: hidden;
@@ -33,7 +33,7 @@ body {
 }
 
 .navbar {
-  background-color: gray;
+  background-color: #808080;
   display: flex;
 }
 
@@ -44,6 +44,7 @@ body {
 
 
 .message {
+  color: white;
   font-family: 'Patua One', cursive;
   font-size: 25px;
   height: 20px;

@@ -32,94 +32,94 @@
           </form>
         </li>
       </ul>
-    </nav>
-    <!--sign-up modal-->
-        <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="modalLabel">Sign Up!</h4>
-              </div>
-              <div class="modal-body">
-                <form id="sign-up">
-                  <input type="email" name="credentials[email]" placeholder="Email" required>
-                  <input type="password" name="credentials[password]" placeholder="password" required>
-                  <input type="password" name="credentials[password_confirmation]" placeholder="password confirmation" required>
-                  <input type="submit" value="Sign Up!">
-                </form>
-              </div>
-              <div class="modal-footer">
-                <h2 class="failedmessage1 fm"></h2>
-              </div>
-            </div>
-          </div>
+  </nav>
+  <!--sign-up modal-->
+  <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="modalLabel">Sign Up!</h4>
         </div>
-        <!-- sign in modal -->
-        <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="modalLabel">Sign In!</h4>
-              </div>
-              <div class="modal-body">
-                <form id="sign-in">
-                  <input type="email" name="credentials[email]" placeholder="Email" required>
-                  <input type="password" name="credentials[password]" placeholder="password" required>
-                  <input type="submit" value="Sign In!">
-                </form>
-              </div>
-              <div class="modal-footer">
-                <h2 class="failedmessage2 fm"></h2>
-              </div>
-            </div>
-          </div>
+        <div class="modal-body">
+          <form id="sign-up">
+            <input type="email" name="credentials[email]" placeholder="Email" required>
+            <input type="password" name="credentials[password]" placeholder="password" required>
+            <input type="password" name="credentials[password_confirmation]" placeholder="password confirmation" required>
+            <input type="submit" value="Sign Up!">
+          </form>
         </div>
-        <!--change password modal-->
-        <div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="modalLabel">Change Password</h4>
-              </div>
-              <div class="modal-body">
-                <form id="change-password">
-                  <input type="password" name="passwords[old]" placeholder="Old Password" required>
-                  <input type="password" name="passwords[new]" placeholder="New password" required>
-                  <input type="submit" value="Change password!">
-                </form>
-              </div>
-              <div class="modal-footer">
-                <h2 class="failedmessage3 fm"></h2>
-              </div>
-            </div>
-          </div>
+        <div class="modal-footer">
+          <h2 class="failedmessage1 fm"></h2>
         </div>
       </div>
-<!--get and hide buttons -->
+    </div>
+  </div>
+  <!-- sign in modal -->
+  <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="modalLabel">Sign In!</h4>
+        </div>
+        <div class="modal-body">
+          <form id="sign-in">
+            <input type="email" name="credentials[email]" placeholder="Email" required>
+            <input type="password" name="credentials[password]" placeholder="password" required>
+            <input type="submit" value="Sign In!">
+          </form>
+        </div>
+        <div class="modal-footer">
+          <h2 class="failedmessage2 fm"></h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--change password modal-->
+  <div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="modalLabel">Change Password</h4>
+        </div>
+        <div class="modal-body">
+          <form id="change-password">
+            <input type="password" name="passwords[old]" placeholder="Old Password" required>
+            <input type="password" name="passwords[new]" placeholder="New password" required>
+            <input type="submit" value="Change password!">
+          </form>
+        </div>
+        <div class="modal-footer">
+          <h2 class="failedmessage3 fm"></h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!--get and hide buttons -->
   <nav>
     <div class="nav-buttons">
       <button id="getTodosButton" class="btn btn-info mr-2">Show List!</button>
-    <button id="clearTodosButton" class="btn btn-info mr-2">Hide List!</button>
-  </div>
+      <button id="clearTodosButton" class="btn btn-info mr-2">Hide List!</button>
+    </div>
   </nav>
 
   <main>
     <!-- create foorm-->
-<div class="create-form">
-  <form id="createForm">
-    <h3>create new task</h3>
-    <p><strong> Title: </strong><input required type="text" name="todo[title]" placeholder="Title"></p>
-    <textarea required type="text" name="todo[text]" maxlength="2000" rows="4" cols="40" placeholder="Write a description of what you want to accomplish"></textarea>
-    </br><input type="submit" name="submit" value="Create">
-  </form>
-</div>
+    <div class="create-form">
+      <form id="createForm">
+        <h3>create new task</h3>
+        <p><strong> Title: </strong><input required type="text" name="todo[title]" placeholder="Title"></p>
+        <textarea required type="text" name="todo[text]" maxlength="2000" rows="4" cols="40" placeholder="Write a description of what you want to accomplish"></textarea>
+        </br><input type="submit" name="submit" value="Create">
+      </form>
+    </div>
 
     <div id="main-content" class="container-fluid">
-    <h4 class="message"></h4>
-  </div>
+      <h4 class="message"></h4>
+    </div>
 
 
     <div id="content" class="content">
