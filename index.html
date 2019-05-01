@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>todo list project</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <!--name -->
+        <span class="navbar-brand" id="brand">Todo List</span>
+      </div>
+      <ul class="nav">
+        <!-- Sign Up model-->
+        <li class="nav-item"><a data-toggle="modal" data-target="#modal1" class="a-sign-up nav-link active"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li class="nav-item"><a data-toggle="modal" data-target="#modal2" class="a-sign-in nav-link"><span class="glyphicon glyphicon-log-in"></span> Sign In</a></li>
+        <li class="nav-item"><a data-toggle="modal" data-target="#modal3" class="a-change-pass nav-link"><span class="glyphicon glyphicon-edit"></span> Change Password</a></li>
+        <li class="nav-item">
+          <form id="sign-out">
+            <input type="submit" value="Sign Out">
+          </form>
+        </li>
+      </ul>
+  </nav>
+  <!--sign-up modal-->
+  <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="modalLabel">Sign Up!</h4>
+        </div>
+        <div class="modal-body">
+          <form id="sign-up">
+            <input type="email" name="credentials[email]" placeholder="Email" required>
+            <input type="password" name="credentials[password]" placeholder="password" required>
+            <input type="password" name="credentials[password_confirmation]" placeholder="password confirmation" required>
+            <input type="submit" value="Sign Up!">
+          </form>
+        </div>
+        <div class="modal-footer">
+          <h2 class="failedmessage1 fm"></h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- sign in modal -->
+  <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="modalLabel">Sign In!</h4>
+        </div>
+        <div class="modal-body">
+          <form id="sign-in">
+            <input type="email" name="credentials[email]" placeholder="Email" required>
+            <input type="password" name="credentials[password]" placeholder="password" required>
+            <input type="submit" value="Sign In!">
+          </form>
+        </div>
+        <div class="modal-footer">
+          <h2 class="failedmessage2 fm"></h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--change password modal-->
+  <div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="modalLabel">Change Password</h4>
+        </div>
+        <div class="modal-body">
+          <form id="change-password">
+            <input type="password" name="passwords[old]" placeholder="Old Password" required>
+            <input type="password" name="passwords[new]" placeholder="New password" required>
+            <input type="submit" value="Change password!">
+          </form>
+        </div>
+        <div class="modal-footer">
+          <h2 class="failedmessage3 fm"></h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!--get and hide buttons -->
+  <nav>
+    <div class="nav-buttons">
+      <button id="getTodosButton" class="btn btn-info mr-2">Show List!</button>
+      <button id="clearTodosButton" class="btn btn-info mr-2">Hide List!</button>
+    </div>
+  </nav>
+
+  <main>
+    <!-- create foorm-->
+    <div class="create-form">
+      <form id="createForm">
+        <h3>create new task</h3>
+        <p><strong> Title: </strong><input required type="text" name="todo[title]" placeholder="Title"></p>
+        <textarea required type="text" name="todo[text]" maxlength="2000" rows="4" cols="40" placeholder="Write a description of what you want to accomplish"></textarea>
+        </br><input type="submit" name="submit" value="Create">
+      </form>
+    </div>
+
+    <div id="main-content" class="container-fluid">
+      <h4 class="message"></h4>
+    </div>
+
+
+    <div id="content" class="content">
+
+    </div>
+  </main>
+
+</body>
+
+</html>
