@@ -1,8 +1,10 @@
-<https://infinite-journey-53974.herokuapp.com/>  heroku link
+<https://infinite-journey-53974.herokuapp.com/>  deployed heroku link
 
-<https://yura85.github.io/todo-list-frontend/> github frontend link
+<https://yura85.github.io/todo-list-frontend/> deployed frontend link
 
-<https://yura85.github.io/todo-list-api/> github api link
+https://github.com/yura85/todo-list-api github api link
+
+https://github.com/yura85/todo-list-frontend github frontend link
 
 ### Todo List Application
 
